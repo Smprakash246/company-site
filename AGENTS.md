@@ -12,7 +12,7 @@ The home page and companies.html render the companies array from data/site.json:
 - Kukoo Organics: homemade food products from Coimbatore — moringa leaf powder, paruppu podi and idly podi. Its URL resolves through kukoo_url.
 - Calvatron: WhatsApp AI patient care for clinics, at https://calvatron.com.
 
-Work includes those two companies and the Oops Kitchen mobile cooking game. The patient journey belongs only on industries/healthcare.html. The home hero has an HTML/CSS growth dashboard labelled “Example dashboard”; use empty values, never claimed results.
+Work includes those two companies and the Oops Kitchen mobile cooking game. The patient journey belongs only on industries/healthcare.html. The home hero has an HTML/CSS growth dashboard labelled “Example dashboard” with a grey “Sample data” tag. Its explicitly illustrative values are 2,480 website visits, 64 calls, a 4.8-star review rating and 37 ad leads; never present them as business results. Count up once over about 1.2 seconds and show two SVG sparklines. Reduced motion shows final values with no animation.
 
 ## Hard rules
 

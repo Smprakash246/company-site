@@ -88,7 +88,7 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
 /* Example growth dashboard: a layout, never a claim of results. */
 .growth-dashboard { min-width: 0; background: var(--bg); border: 1px solid var(--ink); padding: 24px; box-shadow: 8px 8px 0 var(--bg-2); }
 .dashboard-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid var(--ink); margin-bottom: 24px; }
-.dashboard-dot { width: 9px; height: 9px; background: var(--signal); }
+.sample-tag { color: var(--muted); background: var(--bg-2); padding: 3px 7px; font: .65rem var(--mono); white-space: nowrap; }
 .growth-dashboard h2 { font-size: 2.5rem; }
 .dashboard-note { font-size: .85rem; color: var(--muted); }
 .growth-metrics { display: grid; grid-template-columns: 1fr 1fr; margin: 24px 0; border-top: 1px solid var(--line); }
@@ -96,7 +96,15 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
 .growth-metrics > div:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line); }
 .growth-metrics dt { font-size: .9rem; }
 .growth-metrics dd { margin: 4px 0 0; font: 2rem var(--mono); }
-.growth-metrics dd span { display: block; font: .65rem var(--mono); text-transform: uppercase; color: var(--muted); }
+.metric-value { display: block; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.metric-caption { display: block; font: .65rem var(--mono); text-transform: uppercase; color: var(--muted); }
+.metric-star { width: 18px; height: 18px; fill: var(--signal-ink); }
+.sparkline { display: block; width: 100%; max-width: 140px; height: 24px; margin-top: 12px; overflow: visible; }
+.sparkline path { fill: none; vector-effect: non-scaling-stroke; }
+.sparkline-guide { stroke: var(--line); }
+.sparkline-trend { stroke: var(--signal-ink); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.dashboard-animating .sparkline-trend { stroke-dasharray: 1; animation: draw-sparkline 1.2s ease-out both; }
+@keyframes draw-sparkline { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 .dashboard-flow { display: flex; justify-content: space-between; gap: 6px; align-items: center; font-size: .75rem; }
 .dashboard-flow span:nth-child(even) { color: var(--signal-ink); }
 .dashboard-foot { margin: 20px 0 0; padding-top: 16px; border-top: 1px solid var(--ink); font-size: .65rem; }

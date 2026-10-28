@@ -31,14 +31,18 @@
       <div class="meta"><span class="mono">Web · Marketing · AI</span><span class="mono">Built in Coimbatore</span></div>
     </div>
     <div class="growth-dashboard" aria-labelledby="dashboard-title">
-      <div class="dashboard-head"><span class="mono" id="dashboard-title">Example dashboard</span><span class="dashboard-dot" aria-hidden="true"></span></div>
+      <div class="dashboard-head"><span class="mono" id="dashboard-title">Example dashboard</span><span class="sample-tag">Sample data</span></div>
       <h2>Your growth, in view.</h2>
       <p class="dashboard-note">Illustrative layout only. No live data or business results.</p>
       <dl class="growth-metrics">
-        <div><dt>Website visits</dt><dd>— <span>Traffic</span></dd></div>
-        <div><dt>Calls</dt><dd>— <span>Enquiries</span></dd></div>
-        <div><dt>Google reviews</dt><dd>— <span>Reputation</span></dd></div>
-        <div><dt>Ad leads</dt><dd>— <span>Opportunities</span></dd></div>
+        <div><dt>Website visits</dt><dd><span class="visually-hidden">2,480</span><span class="metric-value" aria-hidden="true" data-count-to="2480">2,480</span><span class="metric-caption">Traffic</span>
+          <svg class="sparkline" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><path class="sparkline-guide" d="M1 23H119"/><path class="sparkline-trend" pathLength="1" d="M2 20 14 17 26 19 38 12 50 14 62 9 74 11 86 5 98 7 118 2"/></svg>
+        </dd></div>
+        <div><dt>Calls</dt><dd><span class="visually-hidden">64</span><span class="metric-value" aria-hidden="true" data-count-to="64">64</span><span class="metric-caption">Enquiries</span></dd></div>
+        <div><dt>Google reviews</dt><dd><span class="visually-hidden">4.8 out of 5 stars</span><span class="metric-value" aria-hidden="true"><span data-count-to="4.8" data-count-decimals="1">4.8</span> <svg class="metric-star" viewBox="0 0 24 24" focusable="false"><path d="m12 2 3 6.4 7 .9-5.1 4.9 1.3 7L12 18l-6.2 3.2 1.3-7L2 9.3l7-.9Z"/></svg></span><span class="metric-caption">Reputation</span></dd></div>
+        <div><dt>Ad leads</dt><dd><span class="visually-hidden">37</span><span class="metric-value" aria-hidden="true" data-count-to="37">37</span><span class="metric-caption">Opportunities</span>
+          <svg class="sparkline" viewBox="0 0 120 24" aria-hidden="true" focusable="false"><path class="sparkline-guide" d="M1 23H119"/><path class="sparkline-trend" pathLength="1" d="M2 21 14 18 26 20 38 15 50 17 62 11 74 13 86 8 98 9 118 3"/></svg>
+        </dd></div>
       </dl>
       <div class="dashboard-flow"><span>Get found</span><span>→</span><span>Get in touch</span><span>→</span><span>Stay connected</span></div>
       <p class="mono dashboard-foot">Website + Google + AI / One clear view</p>
@@ -124,6 +128,7 @@
 </main>
 <footer class="site-footer" id="site-footer"></footer>
 <script src="js/site.js"></script>
+<script src="js/dashboard.js"></script>
 <script src="js/chat.js"></script>
 <script>N.load().then(function (s) { if (document.title.indexOf(s.company) < 0) document.title += ' · ' + s.company; });</script>
 </body>
