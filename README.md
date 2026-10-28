@@ -13,7 +13,7 @@ Edit `data/site.json` for names and contact details:
 | Field | Purpose |
 |---|---|
 | `company` | Company identity in the header, footer, titles and assistant |
-| `companies` | Company cards on the home page and `companies.html`; each has `id`, `name`, `description` and `url` |
+| `companies` | Company cards on the home page and `clients.html`; each has `id`, `name`, `description` and `url` |
 | `kukoo_url` | Live food company website; a company `url` of `kukoo_url` resolves to this field |
 | `game` | Mobile cooking game name |
 | `founder`, `founder_role` | About page; founder remains a placeholder |

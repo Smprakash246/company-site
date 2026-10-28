@@ -20,7 +20,7 @@
     document.body.append(fab, panel);
 
     var log = panel.querySelector('.chat-log'), chips = panel.querySelector('.chips'), input = panel.querySelector('input');
-    chips.innerHTML = ['What services do you offer?', 'Tell me about your companies', 'Where is your office?'].map(function (c) {
+    chips.innerHTML = ['What services do you offer?', 'Who are your clients?', 'Where is your office?'].map(function (c) {
       return '<button type="button" class="chip">' + N.esc(c) + '</button>';
     }).join('');
 

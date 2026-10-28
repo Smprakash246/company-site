@@ -16,7 +16,7 @@ window.N = window.N || {};
   })();
   N.wa = function (text) { return 'https://wa.me/' + String(N.site.whatsapp).replace(/\D/g, '') + '?text=' + encodeURIComponent(text); };
 
-  var NAV = [['services.html', 'Services'], ['companies.html', 'Companies'], ['industries/healthcare.html', 'For clinics'], ['work.html', 'Work'], ['about.html', 'About'], ['contact.html', 'Contact']];
+  var NAV = [['services.html', 'Services'], ['clients.html', 'Clients'], ['industries/healthcare.html', 'For clinics'], ['work.html', 'Work'], ['about.html', 'About'], ['contact.html', 'Contact']];
 
   function header(s) {
     var here = location.pathname.replace(/^.*?\/(industries\/)?([^/]*)$/, '$1$2') || 'index.html';
@@ -32,7 +32,7 @@ window.N = window.N || {};
   function footer(s) {
     return '<div class="wrap"><div class="cols">' +
       '<div><div class="big">' + N.esc(s.company) + '</div><p>IT and digital marketing for local businesses. Websites, ads and AI, built in Coimbatore.</p></div>' +
-      '<div><ul><li><a href="' + root + 'services.html">Services</a></li><li><a href="' + root + 'companies.html">Companies</a></li><li><a href="' + root + 'industries/healthcare.html">For clinics</a></li><li><a href="' + root + 'work.html">Work</a></li><li><a href="' + root + 'about.html">About</a></li></ul></div>' +
+      '<div><ul><li><a href="' + root + 'services.html">Services</a></li><li><a href="' + root + 'clients.html">Clients</a></li><li><a href="' + root + 'industries/healthcare.html">For clinics</a></li><li><a href="' + root + 'work.html">Work</a></li><li><a href="' + root + 'about.html">About</a></li></ul></div>' +
       '<div><ul><li><a href="' + N.wa('Hi ' + s.company + '!') + '">WhatsApp ' + N.esc(s.phone) + '</a></li><li><a href="tel:' + N.esc(s.phone.replace(/\s/g, '')) + '">Call us</a></li><li><a href="mailto:' + N.esc(s.email) + '">' + N.esc(s.email) + '</a></li><li>' + N.esc(s.address) + '</li></ul></div>' +
       '</div><p class="fine"><span>© ' + new Date().getFullYear() + ' ' + N.esc(s.company) + '</span><span class="mono">Ganapathy, Coimbatore</span></p></div>';
   }
@@ -56,7 +56,10 @@ window.N = window.N || {};
     });
     document.querySelectorAll('[data-companies]').forEach(function (el) {
       el.innerHTML = s.companies.map(function (c, i) {
-        return '<article class="company-card"><span class="mono">0' + (i + 1) + ' / COMPANY</span><h3>' + N.esc(c.name) + '</h3><p>' + N.esc(c.description) + '</p><a class="btn line small" href="' + N.esc(s[c.url] || c.url) + '" target="_blank" rel="noopener noreferrer">Visit site<span class="visually-hidden">: ' + N.esc(c.name) + ' (opens in a new tab)</span></a></article>';
+        var url = s[c.url] || c.url;
+        return '<article class="company-card"><span class="mono">0' + (i + 1) + ' / CLIENT</span><h3>' + N.esc(c.name) + '</h3><p>' + N.esc(c.description) + '</p>' +
+          (c.work ? '<p class="mono" style="opacity:.75">WE BUILT: ' + N.esc(c.work) + '</p>' : '') +
+          (url ? '<a class="btn line small" href="' + N.esc(url) + '" target="_blank" rel="noopener noreferrer">Visit site<span class="visually-hidden">: ' + N.esc(c.name) + ' (opens in a new tab)</span></a>' : '<span class="mono" style="opacity:.75">Coming soon</span>') + '</article>';
       }).join('');
     });
     var btn = document.querySelector('.menu-btn');

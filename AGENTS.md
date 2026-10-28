@@ -8,7 +8,7 @@ Drocore is an IT and digital marketing company in Ganapathy, Coimbatore, Tamil N
 
 Services: website development, Google Ads and local SEO, Google Business Profile, social media, AI automation and chatbots, 2D animation and video, and game development. Preserve the home services section.
 
-The home page and companies.html render the companies array from data/site.json:
+The home page and clients.html render the companies array from data/site.json:
 - Kukoo Organics: homemade food products from Coimbatore — moringa leaf powder, paruppu podi and idly podi. Its URL resolves through kukoo_url.
 - Calvatron: WhatsApp AI patient care for clinics, at https://calvatron.com.
 
@@ -38,4 +38,4 @@ Preserve server-side prompt ownership, POST-only handling, history and message l
 
 ## Verification and delivery
 
-Run php -S localhost:8000 from the repository. Check every page, including companies.html and 404.html, at 390px and 1366px. Fix overflow, navigation, keyboard/focus issues and console errors. Verify the assistant's no-key fallback without committing a real key. Check all local links and confirm deleted page/demo references are absent. Keep README deployment guidance current. Commit in small steps and push to main when requested.
+Run php -S localhost:8000 from the repository. Check every page, including clients.html and 404.html, at 390px and 1366px. Fix overflow, navigation, keyboard/focus issues and console errors. Verify the assistant's no-key fallback without committing a real key. Check all local links and confirm deleted page/demo references are absent. Keep README deployment guidance current. Commit in small steps and push to main when requested.

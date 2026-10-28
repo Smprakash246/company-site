@@ -83,7 +83,9 @@ if (!$contents || end($contents)['role'] !== 'user') {
 $companies = [];
 foreach ($site['companies'] ?? [] as $company) {
     $url = $site[$company['url']] ?? $company['url'];
-    $companies[] = ($company['name'] ?? '') . ': ' . ($company['description'] ?? '') . ' Website: ' . $url;
+    $companies[] = ($company['name'] ?? '') . ': ' . ($company['description'] ?? '')
+        . (!empty($company['work']) ? ' We built: ' . $company['work'] . '.' : '')
+        . ($url !== '' ? ' Website: ' . $url : ' Website: coming soon');
 }
 $system = strtr((string) @file_get_contents(__DIR__ . '/prompts/company.txt'), [
     '{{COMPANY}}' => $site['company'] ?? '',
