@@ -2,6 +2,8 @@
 
 Drocore is an IT and digital marketing company in Ganapathy, Coimbatore. This static site covers websites, ads, local SEO, AI automation, social media, animation and game development for local businesses.
 
+Instrument Serif, Inter Tight and JetBrains Mono are self-hosted in `assets/fonts/` with their SIL Open Font Licenses. The office map loads when requested; a Google Maps link is also available.
+
 No database or build step. Production hosting uses Apache and PHP 8 on Hostinger.
 
 ## Site data

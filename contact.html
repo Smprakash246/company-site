@@ -7,12 +7,10 @@
 <meta name="description" content="Talk to our team on WhatsApp, phone or email, or visit our office in Ganapathy, Coimbatore.">
 <meta property="og:title" content="Contact us in Ganapathy, Coimbatore">
 <meta property="og:description" content="Talk to our team on WhatsApp, phone or email, or visit our office in Ganapathy, Coimbatore.">
-<meta property="og:image" content="assets/og.png">
+<meta property="og:image" content="https://drocore.com/assets/og.png">
 <meta name="theme-color" content="#F4F3EE">
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-root="">
@@ -31,7 +29,7 @@
 </form>
 <div><dl class="kv" style="grid-template-columns:110px 1fr;font-size:1.05rem">
 <dt>WHATSAPP</dt><dd data-site="phone"></dd><dt>EMAIL</dt><dd data-site="email"></dd><dt>OFFICE</dt><dd data-site="address"></dd><dt>HOURS</dt><dd data-site="hours"></dd></dl>
-<iframe id="map" title="Office location map" loading="lazy" style="margin-top:28px" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<div class="office-map"><p>Find our office in Ganapathy, Coimbatore.</p><div class="actions"><a class="btn line small" id="map-link" href="#" target="_blank" rel="noopener noreferrer">Open in Google Maps</a><button class="btn small" id="load-map" type="button">Show map</button></div><iframe id="map" title="Office location map" hidden style="margin-top:28px" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div>
 </div></section>
 </main>
 <footer class="site-footer" id="site-footer"></footer>
@@ -40,7 +38,11 @@
 <script>N.load().then(function (s) { if (document.title.indexOf(s.company) < 0) document.title += ' · ' + s.company; });</script>
 <script>
 N.load().then(function (s) {
-  document.getElementById('map').src = s.map_embed;
+  document.getElementById('map-link').href = s.map_embed.replace('&output=embed', '');
+  document.getElementById('load-map').addEventListener('click', function () {
+    var map = document.getElementById('map');
+    map.src = s.map_embed; map.hidden = false; this.hidden = true;
+  });
   document.getElementById('lead').addEventListener('submit', function (e) {
     e.preventDefault();
     var v = function (id) { return document.getElementById(id).value.trim(); };

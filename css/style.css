@@ -288,3 +288,10 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
   section { padding-block: 64px; }
   .hero { padding-block: 48px; }
 }
+
+.office-map { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.office-map .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.nav .nav-audit { display: none; }
+@media (max-width: 900px) { .nav .nav-audit { display: inline-flex; margin-top: 12px; } }
+
+.dark .spec-row p { color: #C9C8C0; }
