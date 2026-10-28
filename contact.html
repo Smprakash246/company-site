@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact us in Ganapathy, Coimbatore</title>
+<meta name="description" content="Talk to our team on WhatsApp, phone or email, or visit our office in Ganapathy, Coimbatore.">
+<meta property="og:title" content="Contact us in Ganapathy, Coimbatore">
+<meta property="og:description" content="Talk to our team on WhatsApp, phone or email, or visit our office in Ganapathy, Coimbatore.">
+<meta property="og:image" content="assets/og.png">
+<meta name="theme-color" content="#F4F3EE">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root="">
+<a class="visually-hidden" href="#main">Skip to content</a>
+<header class="site-header" id="site-header"></header>
+<main id="main">
+<section class="page-head grid-bg"><div class="wrap"><span class="label">Contact</span><h1>Tell us about your business.</h1></div></section>
+<section><div class="wrap contact-grid">
+<form class="form" id="lead">
+  <div><label for="f-name">Your name</label><input id="f-name" required autocomplete="name"></div>
+  <div><label for="f-biz">Business name</label><input id="f-biz" required autocomplete="organization"></div>
+  <div><label for="f-phone">Phone</label><input id="f-phone" type="tel" required autocomplete="tel"></div>
+  <div><label for="f-need">What do you need?</label><select id="f-need"><option>Website</option><option>Google Ads</option><option>Google Business Profile</option><option>WhatsApp AI for my clinic</option><option>Social media</option><option>Video or animation</option><option>Not sure yet</option></select></div>
+  <div><label for="f-msg">Anything else (optional)</label><textarea id="f-msg"></textarea></div>
+  <div><button class="btn wa">Send on WhatsApp</button></div>
+</form>
+<div><dl class="kv" style="grid-template-columns:110px 1fr;font-size:1.05rem">
+<dt>WHATSAPP</dt><dd data-site="phone"></dd><dt>EMAIL</dt><dd data-site="email"></dd><dt>OFFICE</dt><dd data-site="address"></dd><dt>HOURS</dt><dd data-site="hours"></dd></dl>
+<iframe id="map" title="Office location map" loading="lazy" style="margin-top:28px" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div></section>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/site.js"></script>
+<script src="js/chat.js"></script>
+<script>N.load().then(function (s) { if (document.title.indexOf(s.company) < 0) document.title += ' · ' + s.company; });</script>
+<script>
+N.load().then(function (s) {
+  document.getElementById('map').src = s.map_embed;
+  document.getElementById('lead').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = function (id) { return document.getElementById(id).value.trim(); };
+    var msg = 'Hi ' + s.company + '!\nName: ' + v('f-name') + '\nBusiness: ' + v('f-biz') + '\nPhone: ' + v('f-phone') + '\nNeed: ' + v('f-need') + (v('f-msg') ? '\n' + v('f-msg') : '');
+    window.open(N.wa(msg), '_blank', 'noopener');
+  });
+});
+</script>
+</body>
+</html>

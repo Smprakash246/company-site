@@ -1,0 +1,5 @@
+# Only chat.php may be called from the browser.
+<FilesMatch "^(config|config\.example)\.php$">
+  Require all denied
+</FilesMatch>
+Options -Indexes
