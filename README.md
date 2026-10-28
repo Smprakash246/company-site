@@ -1,51 +1,46 @@
-# Company website
+# Drocore website
 
-Static website for our digital + AI company in Ganapathy, Coimbatore. Main job: show clinics what we do and let them try the clinic AI live.
+Drocore is an IT and digital marketing company in Ganapathy, Coimbatore. This static site covers websites, ads, local SEO, AI automation, social media, animation and game development for local businesses.
 
-No database, no build step. Works on Hostinger shared hosting with PHP 8.
+No database or build step. Production hosting uses Apache and PHP 8 on Hostinger.
 
-## Rename the company or product
+## Site data
 
-Edit `data/site.json`:
+Edit `data/site.json` for names and contact details:
 
-| Field | What it is |
+| Field | Purpose |
 |---|---|
-| `company` | company name (logo, titles, footer, chat) |
-| `product` | name of the WhatsApp AI product |
-| `product_line` | one-line description of the product |
-| `founder`, `founder_role` | shown on the About page |
-| `phone`, `whatsapp`, `email`, `address`, `hours` | contact details. `whatsapp` = number with country code, no `+` or spaces |
-| `kukoo_url` | live link to the Kukoo Organics site |
-| `demo_clinic` | fictional clinic name used in the demo |
+| `company` | Company identity in the header, footer, titles and assistant |
+| `companies` | Company cards on the home page and `companies.html`; each has `id`, `name`, `description` and `url` |
+| `kukoo_url` | Live food company website; a company `url` of `kukoo_url` resolves to this field |
+| `game` | Mobile cooking game name |
+| `founder`, `founder_role` | About page; founder remains a placeholder |
+| `phone`, `whatsapp`, `email`, `address`, `hours` | Contact details; WhatsApp uses country code without spaces or `+` |
+| `site_url` | `https://drocore.com` — placeholder domain |
+| `map_embed` | Office map URL |
 
-The only other place the names appear is the small `application/ld+json` block in `index.html` (for Google). Update the two names there too when you finalise.
+Keep the static JSON-LD in `index.html`, `sitemap.xml` and `robots.txt` aligned with the confirmed identity and domain. The current email/domain and phone/WhatsApp are placeholders; replace them with verified contact details before launch.
 
-## Turn on the chatbot
+The companies array contains Kukoo Organics (homemade food products) and Calvatron (WhatsApp AI patient care for clinics, https://calvatron.com). Company cards open their websites in new tabs. The patient journey appears only on the healthcare page. The home dashboard is explicitly illustrative and contains no claimed business results.
 
-1. Get a key from Google AI Studio.
-2. Copy `api/config.example.php` to `api/config.php` on the server and paste the key.
-3. Set `GEMINI_MODEL` to a current Gemini model name.
+## Assistant setup
 
-`api/config.php` is git-ignored. Without a key the chat still opens and points people to WhatsApp.
+1. Get a Gemini key from Google AI Studio.
+2. Copy `api/config.example.php` to `api/config.php` on the server and add the key.
+3. Set `GEMINI_MODEL` to a current supported model.
 
-The assistant has two modes, and their instructions are in `api/prompts/`:
-- `company.txt`: answers questions about our services.
-- `clinic_demo.txt`: acts as the front desk of the fictional demo clinic.
+`api/config.php` is git-ignored. Never commit the key or include it in browser code. Without a configured key, the assistant provides a friendly WhatsApp fallback.
 
-Any "Try the clinic AI" button opens the chat straight in demo mode. A link ending in `#demo` does the same, so you can send `yoursite.in/#demo` to someone.
+There is one Drocore assistant. `api/prompts/company.txt` covers services, companies, process and office location. The PHP server fills its placeholders from site data. The browser sends POST JSON `{ "messages": [{ "role": "user", "text": "Hello" }] }`; it cannot choose another prompt. History is limited to 12 messages and 500 characters per message, with same-origin checking and per-IP rate limiting.
 
-## Deploy on Hostinger
+## Run locally
 
-Upload everything into `public_html`, then add `api/config.php` on the server.
-
-## Test on your laptop
-
-```
+```sh
 php -S localhost:8000
 ```
 
-Open http://localhost:8000. Double-clicking the HTML files won't work, because browsers block reading JSON from `file://`.
+Open http://localhost:8000. Direct `file://` browsing cannot fetch the JSON data. Check every HTML page at 390px and 1366px, menu links, company links, contact form and assistant fallback. The PHP development server is for trusted local testing; Apache enforces the committed `.htaccess` restrictions in production.
 
-## Rules for anyone editing
+## Hostinger deployment
 
-Read `AGENTS.md`. In short: no invented clients, numbers or testimonials, and no real clinic names or logos.
+Upload the site into `public_html` and add `api/config.php` separately on the server. Preserve `.htaccess` files, which prevent public access to configuration and prompts. Use https://drocore.com only after confirming domain ownership and DNS. Read `AGENTS.md` before editing; use real project facts and never invent clients, testimonials or results.

@@ -1,16 +1,28 @@
 {
-  "company": "Nexora Digital",
-  "product": "CareLoop",
-  "product_line": "WhatsApp AI patient care for clinics",
+  "company": "Drocore",
   "founder": "Founder name",
   "founder_role": "Founder & CEO",
   "phone": "+91 90000 00000",
   "whatsapp": "919000000000",
-  "email": "hello@nexoradigital.in",
+  "email": "hello@drocore.com",
   "address": "Ganapathy, Coimbatore, Tamil Nadu",
   "hours": "Monday to Saturday, 9:30 am to 7 pm",
   "map_embed": "https://www.google.com/maps?q=Ganapathy,+Coimbatore&output=embed",
-  "site_url": "https://nexoradigital.in",
+  "site_url": "https://drocore.com",
   "kukoo_url": "https://kukooorganics.in",
-  "demo_clinic": "Smile Demo Dental Clinic"
+  "game": "Oops Kitchen",
+  "companies": [
+    {
+      "id": "kukoo",
+      "name": "Kukoo Organics",
+      "description": "Homemade food products from Coimbatore: moringa leaf powder, paruppu podi and idly podi.",
+      "url": "kukoo_url"
+    },
+    {
+      "id": "calvatron",
+      "name": "Calvatron",
+      "description": "WhatsApp AI patient care for clinics.",
+      "url": "https://calvatron.com"
+    }
+  ]
 }
