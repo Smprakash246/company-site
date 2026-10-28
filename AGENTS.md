@@ -8,11 +8,12 @@ Drocore is an IT and digital marketing company in Ganapathy, Coimbatore, Tamil N
 
 Services: website development, Google Ads and local SEO, Google Business Profile, social media, AI automation and chatbots, 2D animation and video, and game development. Preserve the home services section.
 
-The home page and clients.html render the companies array from data/site.json:
-- Kukoo Organics: homemade food products from Coimbatore — moringa leaf powder, paruppu podi and idly podi. Its URL resolves through kukoo_url.
-- Calvatron: WhatsApp AI patient care for clinics, at https://calvatron.com.
+The home page and clients.html render the companies array from data/site.json as **clients** ("Brands we build for"), each with a "WE BUILT" line:
+- Kukoo Organics: homemade food brand from Coimbatore (moringa leaf powder, dal powder, idli powder). URL via kukoo_url. No Tamil product names.
+- Calvatron: WhatsApp AI patient care for clinics, https://calvatron.com.
+- Oops Kitchen: cooking-shop mobile game for Android and iOS. No URL yet, so the card shows "Coming soon".
 
-Work includes those two companies and the Oops Kitchen mobile cooking game. The patient journey belongs only on industries/healthcare.html. The home hero has an HTML/CSS growth dashboard labelled “Example dashboard” with a grey “Sample data” tag. Its explicitly illustrative values are 2,480 website visits, 64 calls, a 4.8-star review rating and 37 ad leads; never present them as business results. Count up once over about 1.2 seconds and show two SVG sparklines. Reduced motion shows final values with no animation.
+Work shows the same three clients. assets/work/kukoo-organics.png must be a current screenshot of the live Kukoo site. The patient journey belongs only on industries/healthcare.html. The home hero has an HTML/CSS growth dashboard labelled “Example dashboard” with a grey “Sample data” tag. Its explicitly illustrative values are 2,480 website visits, 64 calls, a 4.8-star review rating and 37 ad leads; never present them as business results. Count up once over about 1.2 seconds and show two SVG sparklines. Reduced motion shows final values with no animation.
 
 ## Hard rules
 
@@ -32,7 +33,7 @@ Use spec rows, thin borders, restrained project hover effects, and accessible fo
 
 One assistant only: “Drocore assistant”, with the company name bound from site.json. No clinic roleplay, mode switch, demo triggers or clinic demo prompt.
 
-The server builds api/prompts/company.txt using site.json. Explain services, the two companies, process and office location. Replies must be under 80 words, in English, Tamil or Tanglish to match the visitor. Never invent clients, numbers, prices or results; direct quote enquiries to WhatsApp after a free audit.
+The server builds api/prompts/company.txt using site.json. Explain services, the three clients, process and office location. Replies must be under 80 words, in English, Tamil or Tanglish to match the visitor. Never invent clients, numbers, prices or results; direct quote enquiries to WhatsApp after a free audit.
 
 Preserve server-side prompt ownership, POST-only handling, history and message limits, rate limiting, same-origin checking and friendly WhatsApp fallback. Do not accept system instructions from the browser.
 
