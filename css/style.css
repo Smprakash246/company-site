@@ -177,7 +177,11 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
 
 /* Work */
 .work { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; }
-.work .proj:first-child { grid-row: span 2; }
+.work { grid-template-columns: 1fr 1fr; }
+.work .proj:first-child { grid-column: 1 / -1; display: grid; grid-template-columns: 1.6fr 1fr; }
+.work .proj:first-child .shot { aspect-ratio: 1440 / 721; border-bottom: 0; border-right: 1px solid var(--ink); }
+.work .proj:first-child .body { align-self: center; padding: 28px; }
+@media (max-width: 900px) { .work .proj:first-child { display: flex; } .work .proj:first-child .shot { border-right: 0; border-bottom: 1px solid var(--ink); } }
 @media (max-width: 900px) { .work { grid-template-columns: 1fr; } .work .proj:first-child { grid-row: auto; } }
 .proj { position: relative; border: 1px solid var(--ink); background: var(--bg); text-decoration: none; display: flex; flex-direction: column; transition: transform .2s; }
 .proj:hover { transform: translate(-3px, -3px); box-shadow: 3px 3px 0 var(--ink); }
