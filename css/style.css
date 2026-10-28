@@ -42,7 +42,7 @@ p { margin: 0 0 1em; max-width: 64ch; }
 .site-header { position: sticky; top: 0; z-index: 40; background: rgba(244, 243, 238, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .site-header .wrap { display: flex; align-items: center; gap: 24px; height: 64px; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; letter-spacing: -.01em; white-space: nowrap; }
-.logo img { width: 30px; height: 30px; }
+.logo img { width: auto; height: 44px; margin-left: -9px; }
 .nav { display: flex; gap: 26px; margin-left: auto; }
 .nav a { text-decoration: none; font-size: .95rem; color: #3A3A37; padding: 6px 0; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px var(--signal); }

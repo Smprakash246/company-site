@@ -21,7 +21,7 @@ window.N = window.N || {};
   function header(s) {
     var here = location.pathname.replace(/^.*?\/(industries\/)?([^/]*)$/, '$1$2') || 'index.html';
     return '<div class="wrap">' +
-      '<a class="logo" href="' + root + 'index.html"><img src="' + root + 'assets/icons/favicon.svg" alt="" width="30" height="30">' + N.esc(s.company) + '</a>' +
+      '<a class="logo" href="' + root + 'index.html" aria-label="' + N.esc(s.company) + ' home"><img src="' + root + 'assets/brand/drocore-logo-animated.svg" alt="' + N.esc(s.company) + '" width="142" height="36"></a>' +
       '<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>' +
       '<nav class="nav" id="nav" aria-label="Main">' + NAV.map(function (n) {
         return '<a href="' + root + n[0] + '"' + (here === n[0] ? ' aria-current="page"' : '') + '>' + N.esc(n[1]) + '</a>';
