@@ -16,7 +16,7 @@ function reply_json(int $code, array $body): void
     exit;
 }
 
-$fallback = "The assistant is offline right now. Message us on WhatsApp at {$phone} and we'll reply quickly.";
+$fallback = "The assistant is offline right now. Message us on WhatsApp at {$phone} to discuss your business.";
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     reply_json(405, ['error' => 'This address only accepts chat messages.']);
@@ -62,7 +62,6 @@ if ($key === '' || $model === '') {
 }
 
 $input = json_decode((string) file_get_contents('php://input'), true);
-$mode = ($input['mode'] ?? '') === 'clinic_demo' ? 'clinic_demo' : 'company';
 $messages = is_array($input['messages'] ?? null) ? array_slice($input['messages'], -12) : [];
 $contents = [];
 foreach ($messages as $m) {
@@ -80,15 +79,20 @@ if (!$contents || end($contents)['role'] !== 'user') {
     reply_json(400, ['error' => 'Please type a message.']);
 }
 
-// The system prompt is chosen and built on the server only.
-$system = strtr((string) @file_get_contents(__DIR__ . '/prompts/' . $mode . '.txt'), [
+// The sole system prompt and company context are built on the server only.
+$companies = [];
+foreach ($site['companies'] ?? [] as $company) {
+    $url = $site[$company['url']] ?? $company['url'];
+    $companies[] = ($company['name'] ?? '') . ': ' . ($company['description'] ?? '') . ' Website: ' . $url;
+}
+$system = strtr((string) @file_get_contents(__DIR__ . '/prompts/company.txt'), [
     '{{COMPANY}}' => $site['company'] ?? '',
-    '{{PRODUCT}}' => $site['product'] ?? '',
-    '{{PRODUCT_LINE}}' => $site['product_line'] ?? '',
+    '{{COMPANIES}}' => implode("\n", $companies),
+    '{{GAME}}' => $site['game'] ?? '',
+    '{{WHATSAPP}}' => 'https://wa.me/' . preg_replace('/\D/', '', (string) ($site['whatsapp'] ?? '')),
     '{{ADDRESS}}' => $site['address'] ?? '',
     '{{PHONE}}' => $phone,
     '{{HOURS}}' => $site['hours'] ?? '',
-    '{{CLINIC}}' => $site['demo_clinic'] ?? 'Smile Demo Dental Clinic',
 ]);
 
 $payload = [
