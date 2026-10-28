@@ -17,6 +17,8 @@ Work shows the same three clients. assets/work/kukoo-organics.png must be a curr
 
 ## Hard rules
 
+- Never mention the tech stack, AI tools or vendors used to build anything (no "STACK" rows, no ChatGPT, Claude, Codex, Gemini, PHP, HTML on visible pages or in chat replies). The work is presented as built in-house by the Drocore team.
+
 - Static HTML, CSS and vanilla JavaScript. No framework, build step or production Node server. Hostinger shared hosting uses Apache and PHP 8.
 - The chat uses the PHP proxy at api/chat.php. Keep the Gemini key only in git-ignored api/config.php. Commit only the empty api/config.example.php template. Never expose credentials in source, browser code, logs or commits.
 - Do not invent clients, testimonials, stats, numbers, prices, results, awards, certifications or product names. Do not invent clinic identities or logos.
