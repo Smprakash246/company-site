@@ -18,7 +18,7 @@ Edit `data/site.json` for names and contact details:
 | `game` | Mobile cooking game name |
 | `founder`, `founder_role` | About page; founder remains a placeholder |
 | `phone`, `whatsapp`, `email`, `address`, `hours` | Contact details; WhatsApp uses country code without spaces or `+` |
-| `site_url` | `https://drocore.com` — placeholder domain |
+| `site_url` | `https://drocore.in` — live domain |
 | `map_embed` | Office map URL |
 
 Keep the static JSON-LD in `index.html`, `sitemap.xml` and `robots.txt` aligned with the confirmed identity and domain. The current email/domain and phone/WhatsApp are placeholders; replace them with verified contact details before launch.
@@ -45,4 +45,4 @@ Open http://localhost:8000. Direct `file://` browsing cannot fetch the JSON data
 
 ## Hostinger deployment
 
-Upload the site into `public_html` and add `api/config.php` separately on the server. Preserve `.htaccess` files, which prevent public access to configuration and prompts. Use https://drocore.com only after confirming domain ownership and DNS. Read `AGENTS.md` before editing; use real project facts and never invent clients, testimonials or results.
+Upload the site into `public_html` and add `api/config.php` separately on the server. Preserve `.htaccess` files, which prevent public access to configuration and prompts. Use https://drocore.in only after confirming domain ownership and DNS. Read `AGENTS.md` before editing; use real project facts and never invent clients, testimonials or results.
