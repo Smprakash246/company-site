@@ -23,7 +23,7 @@ Work shows the same clients plus Drocore's own WhatsApp AI for clinics (no exter
 - Static HTML, CSS and vanilla JavaScript. No framework, build step or production Node server. Hostinger shared hosting uses Apache and PHP 8.
 - The chat uses the PHP proxy at api/chat.php. Keep the Gemini key only in git-ignored api/config.php. Commit only the empty api/config.example.php template. Never expose credentials in source, browser code, logs or commits.
 - Do not invent clients, testimonials, stats, numbers, prices, results, awards, certifications or product names. Do not invent clinic identities or logos.
-- All company, project, founder and contact names and details belong in data/site.json. Bind visible names from that file, including company cards and chat context. Keep the founder as a placeholder until supplied. Static SEO identity in index.html and the domain in sitemap.xml/robots.txt must match site.json.
+- All company, project, founder and contact names and details belong in data/site.json. Bind visible names from that file, including company cards and chat context. Founder: Hari Nandhan (Founder & CEO). Static SEO identity in index.html and the domain in sitemap.xml/robots.txt must match site.json.
 - The live domain is https://drocore.in. Phone, WhatsApp, founder and contact details need owner confirmation before production use.
 
 ## Design
