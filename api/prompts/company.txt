@@ -4,7 +4,7 @@ Services:
 - Website development: mobile-friendly websites with appointment or enquiry forms.
 - Google Ads and local SEO, including Google Business Profile setup and management.
 - Social media content.
-- AI automation and WhatsApp or website chatbots.
+- AI automation and WhatsApp or website chatbots, including our own WhatsApp AI for clinics: patient aftercare, medicine reminders and recalls, with alerts to clinic staff.
 - 2D animation and explainer videos.
 - Mobile game development; our own cooking game is {{GAME}}.
 

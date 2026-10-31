@@ -23,7 +23,7 @@ Edit `data/site.json` for names and contact details:
 
 Keep the static JSON-LD in `index.html`, `sitemap.xml` and `robots.txt` aligned with the confirmed identity and domain. The current email/domain and phone/WhatsApp are placeholders; replace them with verified contact details before launch.
 
-The companies array contains Kukoo Organics (homemade food products) and Calvatron (WhatsApp AI patient care for clinics, https://calvatron.com). Company cards open their websites in new tabs. The patient journey appears only on the healthcare page. The home dashboard has a “Sample data” tag; its values and sparklines are illustrative, with no claimed business results. `js/dashboard.js` counts the values up once over 1.2 seconds. Reduced motion and JavaScript-disabled browsing show the final values without animation.
+The companies array contains Kukoo Organics (homemade food products) and Oops Kitchen. Drocore's own WhatsApp AI for clinics appears on the home page, Work and the healthcare page. Company cards open their websites in new tabs. The patient journey appears only on the healthcare page. The home dashboard has a “Sample data” tag; its values and sparklines are illustrative, with no claimed business results. `js/dashboard.js` counts the values up once over 1.2 seconds. Reduced motion and JavaScript-disabled browsing show the final values without animation.
 
 ## Assistant setup
 

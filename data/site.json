@@ -20,13 +20,6 @@
       "url": "kukoo_url"
     },
     {
-      "id": "calvatron",
-      "name": "Calvatron",
-      "description": "WhatsApp AI patient care for clinics.",
-      "work": "Product design, WhatsApp AI assistant, website",
-      "url": "https://calvatron.com"
-    },
-    {
       "id": "oops-kitchen",
       "name": "Oops Kitchen",
       "description": "A cooking-shop mobile game for Android and iOS, with funny customer reactions.",
