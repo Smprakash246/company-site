@@ -113,11 +113,16 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
 /* Companies and industries */
 .companies-grid { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 36px; border: 1px solid var(--line); }
 .company-card { display: flex; flex-direction: column; align-items: flex-start; padding: 32px; }
-.company-card + .company-card { border-left: 1px solid var(--line); }
-.company-card .mono { color: var(--signal-ink); margin-bottom: 32px; }
+.company-card { border-top: 1px solid var(--line); }
+.company-card:nth-child(-n+2) { border-top: 0; }
+.company-card:nth-child(even) { border-left: 1px solid var(--line); }
+.company-card .mono { color: var(--signal-ink); margin-bottom: 20px; }
 .company-card h3 { font: 2.3rem var(--serif); }
-.company-card p { flex: 1; }
-.company-card p.mono { flex: 0; margin: 0 0 22px; }
+.company-card .svc { list-style: none; padding: 0; margin: 4px 0 20px; display: flex; flex-wrap: wrap; gap: 6px; flex: 1; align-content: flex-start; }
+.company-card .svc li { border: 1px solid currentColor; padding: 4px 10px; font-size: .82rem; opacity: .85; }
+.company-card blockquote { margin: 0 0 22px; padding-left: 16px; border-left: 2px solid var(--signal); }
+.company-card blockquote p { font-family: var(--serif); font-size: 1.25rem; line-height: 1.35; margin: 0 0 8px; }
+.company-card cite { font-style: normal; font-family: var(--mono); font-size: .75rem; opacity: .75; }
 @media (max-width: 1000px) and (min-width: 721px) { .company-card h3 { font-size: 1.9rem; } .company-card { padding: 24px; } }
 .dark .company-card .mono { color: var(--signal); }
 .dark .company-card .btn.line { color: var(--bg); box-shadow: inset 0 0 0 1px var(--bg); }
@@ -129,7 +134,8 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
 @media (max-width: 640px) {
   .companies-grid, .industry-links { grid-template-columns: 1fr; }
   .company-card { padding: 24px; }
-  .company-card + .company-card { border-left: 0; border-top: 1px solid var(--line); }
+  .company-card, .company-card:nth-child(even) { border-left: 0; }
+  .company-card:nth-child(2) { border-top: 1px solid var(--line); }
   .industry-links > * + * { border-top: 1px solid var(--line); margin-top: 18px; }
 }
 

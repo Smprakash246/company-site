@@ -15,16 +15,49 @@
     {
       "id": "kukoo",
       "name": "Kukoo Organics",
-      "description": "Homemade food brand from Coimbatore: moringa leaf powder, dal powder and idli powder.",
-      "work": "SEO, website development and Google Ads",
+      "sector": "Homemade food brand · Coimbatore",
+      "services": [
+        "Website & online shop",
+        "WhatsApp ordering",
+        "SEO",
+        "Google Ads",
+        "Social media"
+      ],
+      "quote": "We only sold offline before. Drocore built our online shop, set up WhatsApp ordering and now runs our SEO and Google Ads, so new customers can find us and order online.",
+      "quote_by": "Owner, Kukoo Organics",
       "url": "kukoo_url"
     },
     {
       "id": "kvn-traders",
       "name": "KVN Traders",
-      "description": "Trading business in Coimbatore.",
-      "work": "SEO, website development and Google Ads",
+      "sector": "Trading business · Coimbatore",
+      "services": [
+        "Website",
+        "SEO",
+        "Google Ads",
+        "Google Business Profile"
+      ],
+      "quote": "Drocore looks after our website, SEO and Google Ads and keeps us updated every month, so we can focus on running the business.",
+      "quote_by": "Owner, KVN Traders",
       "url": "https://www.kvntrades.com"
+    },
+    {
+      "id": "colosseum",
+      "name": "Colosseum Dental",
+      "sector": "Dental group · United Kingdom",
+      "services": [
+        "Digital marketing support"
+      ],
+      "url": "https://www.colosseumdental.com"
+    },
+    {
+      "id": "ido-uk",
+      "name": "IDO UK",
+      "sector": "United Kingdom",
+      "services": [
+        "Digital marketing support"
+      ],
+      "url": "https://ido-uk.co.uk"
     }
   ],
   "product": "Drocore AI"

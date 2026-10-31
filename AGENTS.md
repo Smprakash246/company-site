@@ -16,7 +16,7 @@ Work shows the same clients plus Drocore's own WhatsApp AI for clinics (no exter
 
 ## Hard rules
 
-- Drocore AI (drocore-ai.html, in the main nav) is Drocore's own WhatsApp AI product for clinics. Never use the name Calvatron, calvatron.com, or any personal or Calvatron email anywhere. Contact is business@drocore.in and +91 80565 63551. Clients are Kukoo Organics and KVN Traders (www.kvntrades.com) (SEO, website development, Google Ads).
+- Drocore AI (drocore-ai.html, in the main nav) is Drocore's own WhatsApp AI product for clinics. Never use the name Calvatron, calvatron.com, or any personal or Calvatron email anywhere. Contact is business@drocore.in and +91 80565 63551. Clients: Kukoo Organics and KVN Traders (full services, testimonials need owner approval), plus Colosseum Dental and IDO UK (digital marketing support only: no website-build claims and no testimonials unless they supply real words).
 
 - Never mention the tech stack, AI tools or vendors used to build anything (no "STACK" rows, no ChatGPT, Claude, Codex, Gemini, PHP, HTML on visible pages or in chat replies). The work is presented as built in-house by the Drocore team.
 

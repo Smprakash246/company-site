@@ -55,11 +55,12 @@ window.N = window.N || {};
       if (company) el.href = s[company.url] || company.url;
     });
     document.querySelectorAll('[data-companies]').forEach(function (el) {
-      el.innerHTML = s.companies.map(function (c, i) {
+      el.innerHTML = s.companies.map(function (c) {
         var url = s[c.url] || c.url;
-        return '<article class="company-card"><span class="mono">0' + (i + 1) + ' / CLIENT</span><h3>' + N.esc(c.name) + '</h3><p>' + N.esc(c.description) + '</p>' +
-          (c.work ? '<p class="mono" style="opacity:.75">WE BUILT: ' + N.esc(c.work) + '</p>' : '') +
-          (url ? '<a class="btn line small" href="' + N.esc(url) + '" target="_blank" rel="noopener noreferrer">Visit site<span class="visually-hidden">: ' + N.esc(c.name) + ' (opens in a new tab)</span></a>' : '<span class="mono" style="opacity:.75">Coming soon</span>') + '</article>';
+        return '<article class="company-card' + (c.quote ? ' has-quote' : '') + '"><span class="mono">' + N.esc(c.sector || '') + '</span><h3>' + N.esc(c.name) + '</h3>' +
+          '<ul class="svc">' + (c.services || []).map(function (x) { return '<li>' + N.esc(x) + '</li>'; }).join('') + '</ul>' +
+          (c.quote ? '<blockquote><p>“' + N.esc(c.quote) + '”</p><cite>' + N.esc(c.quote_by || '') + '</cite></blockquote>' : '') +
+          (url ? '<a class="btn line small" href="' + N.esc(url) + '" target="_blank" rel="noopener noreferrer">Visit site<span class="visually-hidden">: ' + N.esc(c.name) + ' (opens in a new tab)</span></a>' : '') + '</article>';
       }).join('');
     });
     var btn = document.querySelector('.menu-btn');
