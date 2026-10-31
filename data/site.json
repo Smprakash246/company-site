@@ -46,18 +46,24 @@
       "name": "Colosseum Dental",
       "sector": "Dental group · United Kingdom",
       "services": [
-        "Digital marketing support"
+        "Social media content",
+        "Campaign creatives",
+        "Online visibility"
       ],
-      "url": "https://www.colosseumdental.com"
+      "url": "https://www.colosseumdental.com",
+      "note": "We support their UK dental practices with digital marketing: social media content, campaign creatives and work that keeps their practices visible to patients searching online."
     },
     {
       "id": "ido-uk",
       "name": "IDO UK",
       "sector": "United Kingdom",
       "services": [
-        "Digital marketing support"
+        "Social media content",
+        "Campaign creatives",
+        "Online visibility"
       ],
-      "url": "https://ido-uk.co.uk"
+      "url": "https://ido-uk.co.uk",
+      "note": "We support their UK team with digital marketing: social media posts, campaign creatives and content that keeps their brand consistent and visible online."
     }
   ],
   "product": "Drocore AI"

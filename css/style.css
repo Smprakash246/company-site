@@ -329,3 +329,5 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
 .chat-thread .bot { background: #fff; align-self: flex-start; border-top-left-radius: 0; }
 .chat-thread .pt { background: #D7F5C8; align-self: flex-end; border-top-right-radius: 0; }
 @media (max-width: 860px) { .ai-hero, .chat-grid { grid-template-columns: 1fr; } }
+
+.company-card p.note { margin: 0 0 22px; color: inherit; opacity: .8; max-width: 52ch; }
