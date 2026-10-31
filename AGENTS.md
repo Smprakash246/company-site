@@ -12,7 +12,7 @@ The home page and clients.html render the companies array from data/site.json as
 - Kukoo Organics: homemade food brand from Coimbatore (moringa leaf powder, dal powder, idli powder). URL via kukoo_url. No Tamil product names.
 - Oops Kitchen: cooking-shop mobile game for Android and iOS. No URL yet, so the card shows "Coming soon".
 
-Work shows the same clients plus Drocore's own WhatsApp AI for clinics (no external brand name; it links to industries/healthcare.html). assets/work/kukoo-organics.png must be a current screenshot of the live Kukoo site. The patient journey belongs only on industries/healthcare.html. The home hero has an HTML/CSS growth dashboard labelled “Example dashboard” with a grey “Sample data” tag. Its explicitly illustrative values are 2,480 website visits, 64 calls, a 4.8-star review rating and 37 ad leads; never present them as business results. Count up once over about 1.2 seconds and show two SVG sparklines. Reduced motion shows final values with no animation.
+Work shows the same clients plus Drocore's own WhatsApp AI for clinics (no external brand name; it links to industries/healthcare.html). assets/work/kukoo-organics.png must be a current screenshot of the live Kukoo site. The patient journey belongs only on industries/healthcare.html. The home hero shows a Drocore AI promo card (dental WhatsApp chat, linking to drocore-ai.html). No "example", "sample" or "illustrative" labels anywhere.
 
 ## Hard rules
 

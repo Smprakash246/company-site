@@ -331,3 +331,21 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
 @media (max-width: 860px) { .ai-hero, .chat-grid { grid-template-columns: 1fr; } }
 
 .company-card p.note { margin: 0 0 22px; color: inherit; opacity: .8; max-width: 52ch; }
+
+/* Hero: Drocore AI promo */
+.ai-promo { display: grid; gap: 18px; justify-items: center; text-decoration: none; color: inherit; padding: 28px 24px; border: 1px solid var(--ink); background: var(--bg); box-shadow: 8px 8px 0 var(--bg-2); min-width: 0; transition: transform .2s, box-shadow .2s; }
+.ai-promo:hover { transform: translate(-3px, -3px); box-shadow: 11px 11px 0 var(--bg-2); }
+.ai-promo-tag { display: flex; justify-content: space-between; width: 100%; gap: 12px; }
+.ai-phone { width: 100%; max-width: 300px; border-radius: 30px; background: #111; padding: 8px; }
+.ai-phone-bar { display: flex; gap: 10px; align-items: center; background: #0B5E52; color: #fff; padding: 12px 14px; border-radius: 22px 22px 0 0; }
+.ai-av { width: 30px; height: 30px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-size: .95rem; }
+.ai-phone-bar b { display: block; font-size: .85rem; } .ai-phone-bar small { font-size: .7rem; opacity: .85; }
+.ai-thread { background: #EFE7DD; border-radius: 0 0 22px 22px; padding: 12px 10px 16px; display: flex; flex-direction: column; gap: 6px; min-height: 270px; }
+.ai-b { margin: 0; max-width: 85%; padding: 7px 10px; border-radius: 8px; font-size: .8rem; line-height: 1.35; box-shadow: 0 1px 0 rgba(0,0,0,.08); opacity: 0; animation: ai-in .4s ease var(--d) forwards; }
+.ai-b.in { background: #fff; align-self: flex-start; border-top-left-radius: 0; }
+.ai-b.out { background: #D9FDD3; align-self: flex-end; border-top-right-radius: 0; }
+@keyframes ai-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.ai-promo-points { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.ai-promo-points span { border: 1px solid var(--line); padding: 4px 10px; font-size: .82rem; }
+.ai-promo-cta { font-weight: 600; color: var(--signal-ink); }
+@media (prefers-reduced-motion: reduce) { .ai-b { opacity: 1; animation: none; } }
