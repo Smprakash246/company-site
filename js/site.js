@@ -16,7 +16,7 @@ window.N = window.N || {};
   })();
   N.wa = function (text) { return 'https://wa.me/' + String(N.site.whatsapp).replace(/\D/g, '') + '?text=' + encodeURIComponent(text); };
 
-  var NAV = [['services.html', 'Services'], ['clients.html', 'Clients'], ['industries/healthcare.html', 'For clinics'], ['work.html', 'Work'], ['about.html', 'About'], ['contact.html', 'Contact']];
+  var NAV = [['services.html', 'Services'], ['drocore-ai.html', 'Drocore AI'], ['clients.html', 'Clients'], ['industries/healthcare.html', 'For clinics'], ['work.html', 'Work'], ['about.html', 'About'], ['contact.html', 'Contact']];
 
   function header(s) {
     var here = location.pathname.replace(/^.*?\/(industries\/)?([^/]*)$/, '$1$2') || 'index.html';

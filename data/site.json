@@ -16,15 +16,23 @@
       "id": "kukoo",
       "name": "Kukoo Organics",
       "description": "Homemade food brand from Coimbatore: moringa leaf powder, dal powder and idli powder.",
-      "work": "Online shop, WhatsApp ordering, AI shopping assistant",
+      "work": "SEO, website development and Google Ads",
       "url": "kukoo_url"
     },
     {
-      "id": "oops-kitchen",
-      "name": "Oops Kitchen",
-      "description": "A cooking-shop mobile game for Android and iOS, with funny customer reactions.",
-      "work": "Game design, art and development",
+      "id": "blue-sky",
+      "name": "Blue Sky Engineers",
+      "description": "Engineering firm in Coimbatore.",
+      "work": "SEO, website development and Google Ads",
+      "url": ""
+    },
+    {
+      "id": "kvn-traders",
+      "name": "KVN Traders",
+      "description": "Trading business in Coimbatore.",
+      "work": "SEO, website development and Google Ads",
       "url": ""
     }
-  ]
+  ],
+  "product": "Drocore AI"
 }

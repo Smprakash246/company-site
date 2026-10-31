@@ -91,6 +91,7 @@ $system = strtr((string) @file_get_contents(__DIR__ . '/prompts/company.txt'), [
     '{{COMPANY}}' => $site['company'] ?? '',
     '{{COMPANIES}}' => implode("\n", $companies),
     '{{GAME}}' => $site['game'] ?? '',
+    '{{SITE}}' => $site['site_url'] ?? '',
     '{{WHATSAPP}}' => 'https://wa.me/' . preg_replace('/\D/', '', (string) ($site['whatsapp'] ?? '')),
     '{{ADDRESS}}' => $site['address'] ?? '',
     '{{PHONE}}' => $phone,
