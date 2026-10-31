@@ -20,18 +20,11 @@
       "url": "kukoo_url"
     },
     {
-      "id": "blue-sky",
-      "name": "Blue Sky Engineers",
-      "description": "Engineering firm in Coimbatore.",
-      "work": "SEO, website development and Google Ads",
-      "url": ""
-    },
-    {
       "id": "kvn-traders",
       "name": "KVN Traders",
       "description": "Trading business in Coimbatore.",
       "work": "SEO, website development and Google Ads",
-      "url": ""
+      "url": "https://www.kvntrades.com"
     }
   ],
   "product": "Drocore AI"
